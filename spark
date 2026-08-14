@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+define('SPARKED', true);
+define('FCPATH', __DIR__ . '/public/');
+
+chdir(FCPATH);
+
+// Load composer autoloader
+define('COMPOSER_PATH', __DIR__ . '/vendor/autoload.php');
+require COMPOSER_PATH;
+
+require __DIR__ . '/app/Config/Paths.php';
+
+$paths = new Config\Paths();
+
+require rtrim($paths->systemDirectory, '\\/ ') . DIRECTORY_SEPARATOR . 'Boot.php';
+
+exit(CodeIgniter\Boot::bootSpark($paths));
