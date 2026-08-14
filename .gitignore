@@ -1,0 +1,37 @@
+# General
+.DS_Store
+Thumbs.db
+
+# PHP / Composer
+/vendor/
+.env
+.env.*
+.phpunit.result.cache
+
+# CodeIgniter writable folders
+/writable/cache/
+/writable/debugbar/
+/writable/logs/
+/writable/session/
+/writable/uploads/
+
+# Public uploads (user content)
+/public/uploads/
+
+# Node
+/node_modules/
+
+# IDEs
+/.idea/
+/.vscode/
+
+# Coverage and build
+/coverage/
+/build/
+
+# SQLite
+*.sqlite
+*.sqlite3
+
+# Misc
+/composer.phar
